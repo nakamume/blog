@@ -14,7 +14,7 @@
   --color-border: #d4c8b8;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
   --font-mono: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
-  --max-width: 720px;
+  --max-width: min(70%, 900px);
   --spacing: 1.5rem;
 }
 
@@ -580,7 +580,12 @@ a:hover {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  :root {
+    --max-width: 100%;
+    --spacing: 1rem;
+  }
+
   .hero h1 {
     font-size: 1.75rem;
   }
@@ -593,5 +598,10 @@ a:hover {
   .post-item {
     flex-direction: column;
     gap: 0.25rem;
+  }
+
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
