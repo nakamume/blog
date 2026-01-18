@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My Site'
+title = 'Umesh'
 theme = 'minimal'
 
 [params]
@@ -25,16 +25,16 @@ theme = 'minimal'
 
 [menu]
   [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-
-  [[menu.main]]
     name = "Personal"
     url = "/personal/"
-    weight = 2
+    weight = 1
 
   [[menu.main]]
     name = "Professional"
     url = "/professional/"
+    weight = 2
+
+  [[menu.main]]
+    name = "RSS"
+    url = "/index.xml"
     weight = 3
