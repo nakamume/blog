@@ -4,7 +4,7 @@
   {{- if .showSection }}
   <span class="post-section">in {{ .Page.Section }}</span>
   {{- end }}
-  <div class="summary">
-    {{ .Page.Summary }} {{ if .Page.Truncated }} <a href="{{ .Page.RelPermalink }}">Read More ...</a>{{ end }}
-  </div>
+  {{- with .Page.Summary }}
+  <div class="summary">{{ . }}{{ if $.Page.Truncated }} <a href="{{ $.Page.RelPermalink }}">Read More ...</a>{{ end }}</div>
+  {{- end }}
 </li>

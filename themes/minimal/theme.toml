@@ -1,13 +1,7 @@
 name = "Minimal"
-license = "Umesh"
-licenselink = ""
-description = "A minimal custom theme"
+license = "MIT"
+description = "A minimal, sepia-toned Hugo theme with dark mode support"
+min_version = "0.80.0"
 
 [author]
-  name = ""
-  homepage = ""
-
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+name = "Umesh"

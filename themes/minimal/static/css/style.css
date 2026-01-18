@@ -293,7 +293,7 @@ a:hover {
   font-size: 0.8rem;
   padding: 0.25rem 0.75rem;
   background: var(--color-accent);
-  color: white !important;
+  color: var(--color-bg);
   border-radius: 4px;
 }
 
@@ -331,7 +331,6 @@ a:hover {
 .post-content h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
 }
 
 .post-content h1 { font-size: 1.8rem; margin-top: 2.5rem; }
@@ -504,10 +503,6 @@ a:hover {
 .post-content th {
   background: var(--color-bg-alt);
   font-weight: 600;
-}
-
-.post-content tr:nth-child(even) {
-  background: var(--color-bg);
 }
 
 /* Images & Figures */

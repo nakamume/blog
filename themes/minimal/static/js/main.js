@@ -1,34 +1,36 @@
-// Helper to create SVG icon from sprite
-function icon(name) {
+/**
+ * Minimal Theme - Main JavaScript
+ * Features: Theme toggle, header anchors, code copy buttons
+ */
+
+// Create SVG icon from sprite
+const icon = (name) => {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('fill', 'currentColor');
   const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-  use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#icon-' + name);
+  use.setAttribute('href', `#icon-${name}`);
   svg.appendChild(use);
   return svg;
+};
+
+// Theme: Apply saved preference or system default immediately to prevent flash
+const getTheme = () => localStorage.getItem('theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+if (getTheme() === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
 }
 
-// Theme toggle - runs immediately to prevent flash
-(function() {
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-  if (theme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-})();
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Theme toggle button
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme toggle
   const themeToggle = document.getElementById('theme-toggle');
   if (themeToggle) {
-    function updateIcon() {
+    const updateIcon = () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      themeToggle.innerHTML = '';
-      themeToggle.appendChild(icon(isDark ? 'sun' : 'moon'));
-    }
+      themeToggle.replaceChildren(icon(isDark ? 'sun' : 'moon'));
+    };
 
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       const newTheme = isDark ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
@@ -38,20 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateIcon();
   }
+
   // Header anchor links
-  document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').forEach(function(heading) {
-    if (heading.id) {
-      const link = document.createElement('a');
-      link.className = 'header-anchor';
-      link.href = '#' + heading.id;
-      link.setAttribute('aria-label', 'Link to this section');
-      link.appendChild(icon('link'));
-      heading.appendChild(link);
-    }
+  document.querySelectorAll('.post-content :is(h1, h2, h3, h4, h5, h6)[id]').forEach((heading) => {
+    const link = document.createElement('a');
+    link.className = 'header-anchor';
+    link.href = `#${heading.id}`;
+    link.setAttribute('aria-label', 'Link to this section');
+    link.appendChild(icon('link'));
+    heading.appendChild(link);
   });
 
   // Code copy buttons
-  document.querySelectorAll('.post-content pre').forEach(function(pre) {
+  document.querySelectorAll('.post-content pre').forEach((pre) => {
     const wrapper = document.createElement('div');
     wrapper.className = 'code-block';
     pre.parentNode.insertBefore(wrapper, pre);
@@ -63,16 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.appendChild(icon('copy'));
     wrapper.appendChild(btn);
 
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', async () => {
       const code = pre.querySelector('code') || pre;
-      navigator.clipboard.writeText(code.textContent).then(function() {
-        btn.innerHTML = '';
-        btn.appendChild(icon('check'));
-        setTimeout(function() {
-          btn.innerHTML = '';
-          btn.appendChild(icon('copy'));
-        }, 2000);
-      });
+      await navigator.clipboard.writeText(code.textContent);
+      btn.replaceChildren(icon('check'));
+      setTimeout(() => btn.replaceChildren(icon('copy')), 2000);
     });
   });
 });
