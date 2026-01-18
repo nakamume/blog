@@ -1,0 +1,13 @@
+name = "Minimal"
+license = "MIT"
+licenselink = ""
+description = "A minimal custom theme"
+
+[author]
+  name = ""
+  homepage = ""
+
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

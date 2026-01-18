@@ -1,3 +1,40 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My Site'
+theme = 'minimal'
+
+[params]
+  description = "My personal website and blogs"
+  heroTitle = "Welcome"
+  heroTagline = "A space for my thoughts on life and work"
+
+  [[params.blogSections]]
+    name = "Personal"
+    url = "/personal/"
+    description = "Thoughts on life, hobbies, and personal experiences"
+
+  [[params.blogSections]]
+    name = "Professional"
+    url = "/professional/"
+    description = "Work, career insights, and industry observations"
+
+  [[params.blogSections]]
+    name = "Kotaro"
+    url = "/kotaro/"
+    description = "All about the cat"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Personal"
+    url = "/personal/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Professional"
+    url = "/professional/"
+    weight = 3
