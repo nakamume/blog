@@ -1,0 +1,10 @@
+<li class="post-item">
+  <time datetime="{{ .Page.Date.Format "2006-01-02" }}">{{ .Page.Date.Format "Jan 2, 2006" }}</time>
+  <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+  {{- if .showSection }}
+  <span class="post-section">in {{ .Page.Section }}</span>
+  {{- end }}
+  <div class="summary">
+    {{ .Page.Summary }} {{ if .Page.Truncated }} <a href="{{ .Page.RelPermalink }}">Read More ...</a>{{ end }}
+  </div>
+</li>
