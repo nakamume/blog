@@ -1,12 +1,11 @@
 ---
-title: 2024-10-09 The Internet Today
-slug: 2024/the-internet-today
-tags:
-- '2024-10'
-- '2024'
-hide_table_of_contents: false
+title: "The Internet Today"
+date: 2024-10-09
+tags: ["2024-10", "2024"]
+toc: true
+draft: false
 ---
-I started using the internet when I was in 10th grade, around 2010. My first exposure was through feature phones of that time, which could browse the web using some built-in browser. It was very expensive (around Rs.10/MB) and very slow (a couple of KBps).<!-- truncate --> The reason for that anecdote is to say that I am by no means a veteran, but the pace at which things are moving in this space is incredible.
+I started using the internet when I was in 10th grade, around 2010. My first exposure was through feature phones of that time, which could browse the web using some built-in browser. It was very expensive (around Rs.10/MB) and very slow (a couple of KBps).<!--more--> The reason for that anecdote is to say that I am by no means a veteran, but the pace at which things are moving in this space is incredible.
 
 This technology is pretty awesome, but human greed and ego, in my opinion, are doing more harm than good (maybe that was a bit of an overstatement). It feels like the internet is not what it used to be and not what it could have been. There are too many walled gardens, unnecessary and frustrating hops, deceptive, manipulative, and sometimes outright illegal (or on the verge of that) activities being done, all in the name of "making the world a better place."
 
@@ -21,17 +20,13 @@ I'll try to keep this entry focused on the unnecessary and frustrating hops part
 5. The letter is sorted again and delivered to your friend's mailbox.
 6. Your friend takes it out and reads it.
 
-:::warning
-Fortunately, all these middlemen do not read your letters. But they can, without you or your friend even knowing. So always encrypt those letters if you are sending something sensitive.
-:::
+> **Warning:** Fortunately, all these middlemen do not read your letters. But they can, without you or your friend even knowing. So always encrypt those letters if you are sending something sensitive.
 
 The internet or computer networks work in a similar fashion. You attach the destination address to your packet and send it to your router, which forwards it to its neighbor and so on until the destination is reached.
 
 But there's a catch. The way things work today, you might be using, let's say WhatsApp, to send a message to your friend. Instead of sending it directly to your friend, it first goes to the WhatsApp server and then to your friend's phone. The WhatsApp server will store it indefinitely and can do whatever they want with that message, like reading it, deleting it, forwarding it to someone else, etc.
 
-:::warning
-On top of that, all of the other middlemen (routers) can also read all your packets. So encrypt everything; it doesn't cost much.
-:::
+> **Warning:** On top of that, all of the other middlemen (routers) can also read all your packets. So encrypt everything; it doesn't cost much.
 
 Let's take another example.
 

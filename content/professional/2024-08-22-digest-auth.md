@@ -1,13 +1,10 @@
 ---
-title: Basic Auth and Digest
-slug: 2024/basic-auth-and-digest
-tags:
-- '2024-08'
-- '2024'
-- 'digest'
-- 'basic auth'
+title: "Basic Auth and Digest"
+date: 2024-08-22
+tags: ["2024-08", "2024", "digest", "basic auth"]
+draft: false
 ---
-I've started working on [calbridge](/journal/2024/caldav-and-mail) and spent some time working on the caldav client part of it.<!-- truncate --> While connecting to the caldav server, I passed in the creds as basic auth. The server repeatedly returned `401 - Unauthorized`. I might have spent roughly an hour figuring out where I might be sending the wrong username, password or the server url.
+I've started working on [calbridge](/journal/2024/caldav-and-mail) and spent some time working on the caldav client part of it.<!--more--> While connecting to the caldav server, I passed in the creds as basic auth. The server repeatedly returned `401 - Unauthorized`. I might have spent roughly an hour figuring out where I might be sending the wrong username, password or the server url.
 
 And then by luck or whatever, I stumbled across this part of the response
 ```xml
@@ -20,9 +17,7 @@ And then by luck or whatever, I stumbled across this part of the response
 ```
 **No 'Authorization: Digest' header found** - the poor fella was expecting the `Authorization: Digest` and I was passing in the `Authorization: Basic`.
 
-:::tip
-If you are using curl, pass the `--digest` flag and it will handle the **digest** auth flow for you. 
-:::
+> **Tip:** If you are using curl, pass the `--digest` flag and it will handle the **digest** auth flow for you.
 
 I've heard of this auth mechanism before but never went into much details of what it is, why it is and how it is. These three questions I'll try to cover in this blog. Maybe not in much details but something to keep it interesting and informative
 
@@ -33,9 +28,7 @@ Moral of the story: Always use a secured connection (HTTPS) if you are sending o
 
 ## Why
 I think the last section kinda answered this question. We needed it to avoid sending our passwords in plain-text over an HTTP connection.
-:::info
-A question for you: What do you think is the best way to create a user, in the first place, over such a connection?
-:::
+> **Info:** A question for you: What do you think is the best way to create a user, in the first place, over such a connection?
 
 ## How
 I'll try to gloss over most of the technical details but still keep enough to satiate those of you who dig these kind of details. I'll use some Golang code to show the implementation details
@@ -84,6 +77,4 @@ I'll try to gloss over most of the technical details but still keep enough to sa
 
 That was it about the digest auth. A clever way if proving you are who you say you are without sending over your password. Again it might not be necessary if you use HTTPS and might not be very secure(citations needed) but it's still much better than basic auth.
 
-:::warning
-I've removed lots of implementation details from the code snippets above. Do not copy paste this code for your implementation of digest auth. Use some existing library or follow the official RFC or spec of the protocol.
-:::
+> **Warning:** I've removed lots of implementation details from the code snippets above. Do not copy paste this code for your implementation of digest auth. Use some existing library or follow the official RFC or spec of the protocol.

@@ -1,14 +1,11 @@
 ---
-title: 2025-04-29 Manage Kubernetes Resources With Crossplane
-slug: 2025/manage-kubernetes-resources-with-crossplane
-tags:
-- '2025-04'
-- '2025'
-- 'crossplane'
-- 'k8s native resources'
-hide_table_of_contents: false
+title: "Manage Kubernetes Resources With Crossplane"
+date: 2025-04-29
+tags: ["2025-04", "2025", "crossplane", "k8s native resources"]
+toc: true
+draft: false
 ---
-I'm serously invested in adopting Crossplane at work. Benefits it brings over existing terraform based infra management are - it's K8s native, infra and applications can be deployed side-by-side, <!-- truncate -->continous reconsilation unlike Terraform which is fire-and-forget unless being wrapped around in some reconsiler (actually most of the Crossplane providers I'm using are Terraform wrappers) and infra can be continiujly deployed using some CD tool like ArgoCD and there won't be issues of configuration/infra drift.
+I'm serously invested in adopting Crossplane at work. Benefits it brings over existing terraform based infra management are - it's K8s native, infra and applications can be deployed side-by-side, <!--more-->continous reconsilation unlike Terraform which is fire-and-forget unless being wrapped around in some reconsiler (actually most of the Crossplane providers I'm using are Terraform wrappers) and infra can be continiujly deployed using some CD tool like ArgoCD and there won't be issues of configuration/infra drift.
 
 Similar to Terraform, Crossplane has providers for most resource providers (AWS, GCP, K8s etc) and they work pretty well. Though I had a simple use case in mind and this post is about that.
 

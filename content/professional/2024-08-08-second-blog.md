@@ -1,17 +1,10 @@
 ---
-title: Started a second blog
-slug: 2024/started-second-blog
+title: "Started a second blog"
 date: 2024-08-08
-tags:
-- '2024-08'
-- '2024'
-- journal
-- daily
-- 'multiple blogs'
-- rss
-- 'custom css'
+tags: ["2024-08", "2024", "journal", "daily", "multiple blogs", "rss", "custom css"]
+draft: false
 ---
-For some time, I wanted to start with a daily blog. Yes, I know I started this blog about four months ago and have only two entries as of now (including this one). Guess I'm mostly into wasting my time finding which blog genertors to use and starting up a blog site but not into writing. Anyways, I wanted a new blog where I could write freely, without going into much details of the things, about my daily life and routine. I've set up a docusaurus blog previously (the one you are currently reading). I spent some time checking if the **mdbook** would be a good fit for this daily journal blog. Fired up a test mdbook book and compared it with docusaurus style blog I had. Docusaurus style felt good to eyes (it looked nice) - so I decided to stick with docusaurus and started a second blog on same docusaurus instance. You can find it at [/journal](/journal) address of this site.
+For some time, I wanted to start with a daily blog. Yes, I know I started this blog about four months ago and have only two entries as of now (including this one).<!--more--> Guess I'm mostly into wasting my time finding which blog genertors to use and starting up a blog site but not into writing. Anyways, I wanted a new blog where I could write freely, without going into much details of the things, about my daily life and routine. I've set up a docusaurus blog previously (the one you are currently reading). I spent some time checking if the **mdbook** would be a good fit for this daily journal blog. Fired up a test mdbook book and compared it with docusaurus style blog I had. Docusaurus style felt good to eyes (it looked nice) - so I decided to stick with docusaurus and started a second blog on same docusaurus instance. You can find it at [/journal](/journal) address of this site.
 
 ## Detail about the setup
 This blog lives at [nakamorg.github.io](https://github.com/nakamorg/nakamorg.github.io) github repo under the top level `blogs` folder. I created a new top level `journal` folder for the secondary blog. Idea is to dump any markdown file in that folder and have it served. To make it work, I updated the plugins section in my config file
@@ -119,7 +112,7 @@ Used [favicon-converter](https://favicon.io/favicon-converter/) on my profile im
 
 ### Github and Feed icons
 This is how the nav bar used to look before
-![old nav bar](assets/navbar-20240808.png)
+![old nav bar](/images/navbar-20240808.png)
 The link for the rss feed of this blog and my github page looked so bad. I looked at how Docusaurus themselves have done it for their site and copied their config. So the navbar config looks like
 ```js title="docusaurus.config.ts"
 ....
@@ -180,6 +173,6 @@ corresponding css config
 Feel free to copy it if you need :wink:. I got the Github icon svg from the Docusaurus github repo. As for the rss icon, I downloded the svg from [www.svgrepo.com](https://www.svgrepo.com/svg/507840/rss) and then converted it to css using [yoksel.github.io/url-encoder](https://yoksel.github.io/url-encoder/).
 
 That's all for today and this post. Ah well, one more thing. This is how the navigation bar looks after these changes (in case the current nav-bar has changed after this blog entry).
-![new nav bar](./assets/new-navbar-20240808.png)
+![new nav bar](/images/new-navbar-20240808.png)
 
 Much better than before and I like it a lot as of now.

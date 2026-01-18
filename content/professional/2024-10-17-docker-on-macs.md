@@ -1,15 +1,10 @@
 ---
-title: 2024-10-17 Docker On Macs
-slug: 2024/docker-on-macs
-tags:
-- '2024-10'
-- '2024'
-- 'docker'
-- 'macbook'
-- 'lima'
-- 'multiarch'
+title: "Docker On Macs"
+date: 2024-10-17
+tags: ["2024-10", "2024", "docker", "macbook", "lima", "multiarch"]
+draft: false
 ---
-Docker has been pushing more and more for Docker Desktop, and most of their documentation is now centered around Docker Desktop. Good for them. We all need bread on the table.<!-- truncate --> They are also very committed to keeping the Docker Engine and CLI open source. Good for us. I think it's a win-win. This post is about setting up Docker on Macs without Docker Desktop. It should integrate as if you are running Docker natively on your Mac and support multi-arch images (still lots of AMD servers out there).
+Docker has been pushing more and more for Docker Desktop, and most of their documentation is now centered around Docker Desktop. Good for them. We all need bread on the table.<!--more--> They are also very committed to keeping the Docker Engine and CLI open source. Good for us. I think it's a win-win. This post is about setting up Docker on Macs without Docker Desktop. It should integrate as if you are running Docker natively on your Mac and support multi-arch images (still lots of AMD servers out there).
 
 Okay, so let's keep it simple without further blabbering. We are going to use [Lima](https://github.com/lima-vm/lima) to create a Linux VM with Docker and install Docker CLI on the MacBook. The CLI will connect to the Docker daemon running on the Linux VM transparently.
 

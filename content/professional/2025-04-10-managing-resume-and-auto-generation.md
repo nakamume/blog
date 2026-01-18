@@ -1,18 +1,14 @@
 ---
-title: 2025-04-10 Managing Resume And Auto-generation
-slug: 2025/managing-resume-and-auto-generation
-tags:
-- '2025-04'
-- '2025'
-- 'md2pdf'
-- 'resume'
-- 'automation'
-hide_table_of_contents: false
+title: "Managing Resume And Auto-generation"
+date: 2025-04-10
+tags: ["2025-04", "2025", "md2pdf", "resume", "automation"]
+toc: true
+draft: false
 ---
 I recently updated my resume, which involved the usual process:
-- Searching for achievements to add (I record these as they happen in Notion and a GitHub repo)
+- Searching for achievements to add (I record these as they happen in Notion and a GitHub repo)<!--more-->
 - Locating the previous Google Doc containing my resume
-- Making in-place updates to that doc and spending a frustrating amount of time getting the indentation and spacing right in Google Docs<!-- truncate -->
+- Making in-place updates to that doc and spending a frustrating amount of time getting the indentation and spacing right in Google Docs
 - Downloading the document as a PDF and uploading it to Google Drive (I couldn't find a "Save as PDF" option in Google Docs to automatically save it to Drive)
 
 This process requires a significant amount of data gathering and copying/pasting. I had the idea of managing my resume as a blog post on this blog, which is entirely written in Markdown. This would allow me to have everything in Markdown, tracked by Git, and stored on GitHub. I thought of storing everything solely on GitHub (instead of Notion and Google Docs) as Markdown and writing a Markdown processor to convert it to PDF (since we'll likely need PDFs for the foreseeable future).

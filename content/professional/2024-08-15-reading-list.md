@@ -1,10 +1,9 @@
 ---
-title: Reading List
-slug: 2024/reading-list
-tags:
-- reading
-- 'reading-list'
-hide_table_of_contents: false
+title: "Reading List"
+date: 2024-08-15
+tags: ["reading", "reading-list"]
+toc: true
+draft: false
 ---
 I've been thinking about managing a reading list, basically a list of urls or excerpts as I read them or get to know about them. Previously, <!--more-->I set up Linkwarden for this but didn't use it much (or at all). Hoping that this rlog (running blog) can substitute that. Hopefully, I'll keep it updated with everything insteresting I read on day to day basis, but it'll mostly be media that I'd consume on my workstation (same machine I use to write this blog). Anyways, something is better than nothing. off we go
 

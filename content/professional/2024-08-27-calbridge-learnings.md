@@ -1,16 +1,10 @@
 ---
-title: Learnings From Calbridge
-slug: 2024/learnings-from-calbridge
-tags:
-- '2024-08'
-- '2024'
-- 'calbridge'
-- 'learning'
-- 'caldav'
-- 'smtp'
-- 'imap'
+title: "Learnings From Calbridge"
+date: 2024-08-27
+tags: ["2024-08", "2024", "calbridge", "learning", "caldav", "smtp", "imap"]
+draft: false
 ---
-Development of [calbridge](https://github.com/nakamorg/calbridge) is going on with full momentum now. I've been spending hours working on it during nights.<!-- truncate --> Just kidding. I mean I've spent couple of nights working on it but then took some time off. And then wanted to write this blog before picking it up again. For the uninitiated, **calbridge** is a utility I've been working on to integrate (or bridge) my Caldav server with my mail server. More background [here](/journal/2024/caldav-and-mail), if you are interested.
+Development of [calbridge](https://github.com/nakamorg/calbridge) is going on with full momentum now. I've been spending hours working on it during nights.<!--more--> Just kidding. I mean I've spent couple of nights working on it but then took some time off. And then wanted to write this blog before picking it up again. For the uninitiated, **calbridge** is a utility I've been working on to integrate (or bridge) my Caldav server with my mail server. More background [here](/journal/2024/caldav-and-mail), if you are interested.
 
 Anyways, I wanted to take some time and jot down my thoughts and learnings from this project so far.
 
@@ -20,16 +14,12 @@ I used `Claude Opus` to bootstrap the project. It provided me with the initial s
 ## Auth
 First thing that I came across and learned about was the `Digest Auth` and have already written a blog about that [here](/blog/2024/basic-auth-and-digest). I started with making simple `http` calls to the server to fetch my calendars and it seemed to have worked once the auth thing got fixed. But I soon found myself wanting more (like correctly parsing and handling calendar data). I was a bit hesitant to include too many dependencies to the project at first but ultimately gave up on that design goal as I wanted to have something working as soon as possible instead of spending too much time getting it perfect. Which brings us to our next topic. Packages.
 
-:::note
-It's okay to start with an "un-optimized" solution and have it working instead of spending too much energy building the perfect product in the first try. Once you have something working, you can iterate on it if you want.
-:::
+> **Note:** It's okay to start with an "un-optimized" solution and have it working instead of spending too much energy building the perfect product in the first try. Once you have something working, you can iterate on it if you want.
 
 ## Packages
 I looked for packages a lot. All I wanted were thin client libs for caldav, smtp and imap. But for caldav, at least, most of the libs were either abondoned or were providing both the server and the client. Ultimately, I settled with https://github.com/emersion - it came with webdav, caldav client and server (talking about thin clients). Thank you **emersion** for providing such a high quality implementation of these protocols. **emersion** provided all the libs I needed. While the libs were lacking in documentation and some working examples, they were implementing the target protocols (caldav, imap etc) to the point and using same terminology for variable, function names etc. as in the protocl spec. So, it didn't take much effort (if you don't consider 2-3 hours of fumbling around **much**) to write something working.
 
-:::note
-And much of this time could have been saved if I had looked at github issues earlier.
-:::
+> **Note:** And much of this time could have been saved if I had looked at github issues earlier.
 
 Next, I'll discuss about some of these issues in detail.
 
@@ -47,9 +37,7 @@ Nowhere does it mentions that it won't clone the body. It even says that it make
 
 And that was it. The server started returning my calendars after that.
 
-:::note
-That's not entirely true. During debugging, I thought that maybe I'm not sending the correct queries to the server. So I tried with bunch of different queries and settings. And then spent some extra minutes to realize that I've messed up the queries and then some more to correcting those.
-:::
+> **Note:** That's not entirely true. During debugging, I thought that maybe I'm not sending the correct queries to the server. So I tried with bunch of different queries and settings. And then spent some extra minutes to realize that I've messed up the queries and then some more to correcting those.
 
 ## SMPT - Just use an external package
 I started with `net/smtp` package that is included with the standard Golang installation. There was nothing wrong with it but it seems that its development is frozen and the authors suggested using some other maintained lib. So, after writing a working implementation using this "obselete" lib, I searched for another lib and then re-wrote the thing to make it compatible with the new lib.
@@ -96,9 +84,7 @@ if err := c.Fetch(seqSet, items, msgs); err != nil {
 ```
 `items` that I want to fetch is the email body (`imap.FetchBody` here is the string `BODY`) - as that's the thing that would have the calendar invites I'm after. But the body field of all the emails that it fetched was always `nil`. It was weird. I had explicitly specified to fetch the `BODY` and the body was nil. Then my monkey brain told me not to optimize and just fetch everything. Conveniently, there was `imap.FetchAll` and I thought it would fetch everything. But NO. Both of these options fetched everthing but the email body. After plucking another 100 hair from my head and I surrendered and looked online. Within a minute or so, I came across this github comment `https://github.com/emersion/go-imap/issues/306#issuecomment-546532174` - turned out I had to fetch `BODY.PEEK[]`. Fetch `ALL` or `BODY` do not fetch everthing or the body respectively (as one would have expected) but the headers and stuff. So, folks please read those RFCs.
 
-:::note
-Peek keeps the email unread, so one can use `BODY[]` as well if they want to mark the mail read. (Look at the smart me)
-:::
+> **Note:** Peek keeps the email unread, so one can use `BODY[]` as well if they want to mark the mail read. (Look at the smart me)
 
 So, here's the wokring code
 ```go
@@ -124,6 +110,4 @@ But I became a smart-ass and asked why it was making it so complicated. We neede
 ## Something to end the blog with
 Like I mentioned in the begining, I wanted to keep the final binary very small and might end up re-writing some of the functionalities that the packages provide by myself. As of now, I think that the webdav dependency (it provides caldav) can be easily do away with. As it just needs to make some simple http calls to the server. So that's something I've been looking towards getting rid of. But not until I have a fully working solution ready first.
 
-:::note
-I loved using these **note** sections in this blog entry. Sometimes at places where it didn't make any sense. And now this blog entry being done, maybe I can go back actually implementaing the real thing.
-:::
+> **Note:** I loved using these **note** sections in this blog entry. Sometimes at places where it didn't make any sense. And now this blog entry being done, maybe I can go back actually implementaing the real thing.
