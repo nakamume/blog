@@ -22,7 +22,7 @@
   <section class="recent-posts">
     <h2>Recent Posts</h2>
     <ul class="post-list">
-      {{ range first 5 (where .Site.RegularPages "Section" "ne" "") }}
+      {{ range first 3 (where .Site.RegularPages "Section" "ne" "") }}
       <li class="post-item">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         <a href="{{ .Permalink }}">{{ .Title }}</a>

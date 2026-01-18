@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://blog.takabu.org/'
 languageCode = 'en-us'
 title = 'Umesh'
 theme = 'minimal'
@@ -37,5 +37,9 @@ summaryLength = 9
 
   [[menu.main]]
     name = "RSS"
-    url = "/index.xml"
+    url = "/rss.xml"
     weight = 3
+
+[outputFormats]
+  [outputFormats.RSS]
+    baseName = "rss"
