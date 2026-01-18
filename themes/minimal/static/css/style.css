@@ -1,3 +1,7 @@
+.svg-icons {
+  display: none;
+}
+
 /* Reset and base styles */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -199,9 +203,39 @@ a:hover {
 }
 
 .post-content h2,
-.post-content h3 {
+.post-content h3,
+.post-content h4 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.header-anchor {
+  margin-left: 0.5rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  opacity: 0;
+}
+
+.header-anchor svg {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: middle;
+}
+
+.post-content :is(h1, h2, h3, h4):hover .header-anchor,
+.header-anchor:focus {
+  opacity: 1;
+}
+
+.header-anchor:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .header-anchor {
+    opacity: 0.5;
+  }
 }
 
 .post-content p {
