@@ -1,7 +1,6 @@
 ---
 title: "A Weekend of Hiking"
 date: 2025-01-15
-description: "Reflections from a trail hike last weekend"
 tags: ["outdoors", "hiking", "nature"]
 draft: false
 ---

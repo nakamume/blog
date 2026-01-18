@@ -2,7 +2,6 @@
 title: "The Complete Guide to Kotaro"
 date: 2025-01-18
 lastmod: 2025-01-18
-description: "Everything you need to know about our beloved cat Kotaro - a comprehensive post testing all Hugo and Markdown features"
 tags: ["cat", "kotaro", "pets", "guide"]
 categories: ["Cats", "Family"]
 keywords: ["cat care", "kotaro", "feline"]

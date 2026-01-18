@@ -8,7 +8,9 @@
     <li class="post-item">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
       <a href="{{ .Permalink }}">{{ .Title }}</a>
-      {{ with .Description }}<p class="post-summary">{{ . }}</p>{{ end }}
+      <div class="summary">
+        {{ .Summary }} {{ if .Truncated }} <a href="{{ .RelPermalink }}">Read More ...</a>{{ end }}
+      </div>
     </li>
     {{ end }}
   </ul>

@@ -2,6 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Umesh'
 theme = 'minimal'
+summaryLength = 9
 
 [params]
   description = "My personal website and blogs"

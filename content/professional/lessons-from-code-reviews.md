@@ -1,7 +1,6 @@
 ---
 title: "Lessons from Code Reviews"
 date: 2025-01-10
-description: "What I've learned from both giving and receiving code reviews"
 tags: ["engineering", "code-review", "career"]
 draft: false
 ---
