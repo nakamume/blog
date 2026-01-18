@@ -10,7 +10,7 @@ function icon(name) {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Header anchor links
-  document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4').forEach(function(heading) {
+  document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').forEach(function(heading) {
     if (heading.id) {
       const link = document.createElement('a');
       link.className = 'header-anchor';
@@ -30,15 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btn = document.createElement('button');
     btn.className = 'copy-btn';
-    btn.textContent = 'Copy';
+    btn.setAttribute('aria-label', 'Copy code');
+    btn.appendChild(icon('copy'));
     wrapper.appendChild(btn);
 
     btn.addEventListener('click', function() {
       const code = pre.querySelector('code') || pre;
       navigator.clipboard.writeText(code.textContent).then(function() {
-        btn.textContent = 'Copied!';
+        btn.innerHTML = '';
+        btn.appendChild(icon('check'));
         setTimeout(function() {
-          btn.textContent = 'Copy';
+          btn.innerHTML = '';
+          btn.appendChild(icon('copy'));
         }, 2000);
       });
     });
