@@ -8,7 +8,36 @@ function icon(name) {
   return svg;
 }
 
+// Theme toggle - runs immediately to prevent flash
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
+  // Theme toggle button
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    function updateIcon() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      themeToggle.innerHTML = '';
+      themeToggle.appendChild(icon(isDark ? 'sun' : 'moon'));
+    }
+
+    themeToggle.addEventListener('click', function() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateIcon();
+    });
+
+    updateIcon();
+  }
   // Header anchor links
   document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').forEach(function(heading) {
     if (heading.id) {
