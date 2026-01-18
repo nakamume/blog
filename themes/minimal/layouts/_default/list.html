@@ -5,13 +5,7 @@
 
   <ul class="post-list">
     {{ range .Pages }}
-    <li class="post-item">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <div class="summary">
-        {{ .Summary }} {{ if .Truncated }} <a href="{{ .RelPermalink }}">Read More ...</a>{{ end }}
-      </div>
-    </li>
+    {{ partial "post-item.html" (dict "Page" . "showSection" false) }}
     {{ end }}
   </ul>
 </div>
