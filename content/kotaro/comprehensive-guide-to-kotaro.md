@@ -1,7 +1,6 @@
 ---
 title: "The Complete Guide to Kotaro"
 date: 2025-01-18
-lastmod: 2025-01-18
 tags: ["cat", "kotaro", "pets", "guide"]
 categories: ["Cats", "Family"]
 keywords: ["cat care", "kotaro", "feline"]
