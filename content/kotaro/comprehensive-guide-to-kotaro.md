@@ -1,12 +1,11 @@
 ---
 title: "The Complete Guide to Kotaro"
 date: 2025-01-18
-lastmod: 2025-01-18
 tags: ["cat", "kotaro", "pets", "guide"]
 categories: ["Cats", "Family"]
 keywords: ["cat care", "kotaro", "feline"]
 author: "Cat Parent"
-draft: false
+math: true
 toc: true
 weight: 1
 series: ["Kotaro Chronicles"]
@@ -360,13 +359,13 @@ def pet_kotaro():
 {{< /highlight >}}
 
 #### Gist Shortcode (example syntax)
-<!-- {{< gist username gist_id >}} -->
+{{< gist nakamume 39e71ebe6b676602f7488bf07bccfd7b >}}
 
 #### YouTube Shortcode (example syntax)
-<!-- {{< youtube video_id >}} -->
+{{< youtube 0RKpf3rK57I >}}
 
 #### Tweet Shortcode (example syntax)
-<!-- {{< tweet user="username" id="tweet_id" >}} -->
+{{< tweet user="username" id="tweet_id" >}}
 
 ---
 
