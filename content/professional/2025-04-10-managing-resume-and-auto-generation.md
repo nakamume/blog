@@ -5,8 +5,8 @@ tags: ["2025-04", "2025", "md2pdf", "resume", "automation"]
 toc: true
 draft: false
 ---
-I recently updated my resume, which involved the usual process:
-- Searching for achievements to add (I record these as they happen in Notion and a GitHub repo)<!--more-->
+I recently updated my resume, which involved the usual process:<!--more-->
+- Searching for achievements to add (I record these as they happen in Notion and a GitHub repo)
 - Locating the previous Google Doc containing my resume
 - Making in-place updates to that doc and spending a frustrating amount of time getting the indentation and spacing right in Google Docs
 - Downloading the document as a PDF and uploading it to Google Drive (I couldn't find a "Save as PDF" option in Google Docs to automatically save it to Drive)

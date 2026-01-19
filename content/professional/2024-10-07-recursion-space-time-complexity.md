@@ -3,7 +3,7 @@ title: "Space time complexities of recursive algorithms"
 date: 2024-10-07
 tags: ["2024-10", "2024", "recursion", "time complexity", "daily"]
 toc: true
-draft: false
+math: true
 ---
 Sometimes, I have difficulties visualizing the time complexities of recursive algorithms. For iterative ones, not considering the tricky notorious ones,<!--more--> most of the time I can just count the number of instructions and make some sense of it, but doing so for recursive algorithms overflows my brain's stack. I'll use this blog to jot down some ideas and approaches for doing complexity analysis on recursive algorithms.
 

@@ -4,7 +4,7 @@ date: 2024-08-27
 tags: ["2024-08", "2024", "calbridge", "learning", "caldav", "smtp", "imap"]
 draft: false
 ---
-Development of [calbridge](https://github.com/nakamorg/calbridge) is going on with full momentum now. I've been spending hours working on it during nights.<!--more--> Just kidding. I mean I've spent couple of nights working on it but then took some time off. And then wanted to write this blog before picking it up again. For the uninitiated, **calbridge** is a utility I've been working on to integrate (or bridge) my Caldav server with my mail server. More background [here](/journal/2024/caldav-and-mail), if you are interested.
+Development of [calbridge](https://github.com/nakamorg/calbridge) is going on with full momentum now. I've been spending hours working on it during nights. Just kidding. I mean I've spent couple of nights <!--more-->working on it but then took some time off. And then wanted to write this blog before picking it up again. For the uninitiated, **calbridge** is a utility I've been working on to integrate (or bridge) my Caldav server with my mail server. More background [here](/journal/2024/caldav-and-mail), if you are interested.
 
 Anyways, I wanted to take some time and jot down my thoughts and learnings from this project so far.
 
