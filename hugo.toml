@@ -26,13 +26,13 @@ summaryLength = 9
 
 [menu]
   [[menu.main]]
-    name = "Journal"
-    url = "/journal/"
+    name = "Professional"
+    url = "/professional/"
     weight = 1
 
   [[menu.main]]
-    name = "Professional"
-    url = "/professional/"
+    name = "Journal"
+    url = "/journal/"
     weight = 2
 
   [[menu.main]]
