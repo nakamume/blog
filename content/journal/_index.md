@@ -1,5 +1,5 @@
 ---
-title: "Personal"
+title: "(Maybe) Daily Journal"
 description: "Thoughts on life, hobbies, and personal experiences"
 ---
 
