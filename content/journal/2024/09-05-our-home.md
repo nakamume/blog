@@ -2,7 +2,6 @@
 title: "Our Home"
 date: 2024-09-05
 tags: ["2024-09", "2024"]
-toc: false
 ---
 I've had this bug of blogging a couple of times. But it seems that my current setup is kind of working, and I seem to be pretty consistent with it.<!--more--> Before this, I tried a couple of things and forgot about them. One of those things/platforms was Notion. I recently looked at my Notion pages and found I had a couple of entries there. One of those was about moving to our current home. Now, instead of copying and pasting the entry as-is here, I decided to write something fresh.
 

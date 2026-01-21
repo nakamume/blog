@@ -2,7 +2,6 @@
 title: "Caldav and Mail Server"
 date: 2024-08-19
 tags: ["2024-08", "2024", "caldav", "connector"]
-toc: false
 ---
 For the last couple of days, I have been obsessed with integrating my CalDAV and mail servers. My mails are managed by MXRoute. I took their lifetime subscription<!--more-->, so I think I'm sorted for life or at least the next 5-10 years or sooner (if I end up starting a business and then just drop my guards and go with Google Workspace and equivalents). Anyways, enough digression.
 

@@ -2,7 +2,6 @@
 title: "Baby Girl Is Here"
 date: 2024-09-25
 tags: ["2024-09", "2024", "baby girl"]
-toc: false
 ---
 I've been meaning to write but somehow don't seem to have enough time or energy. A lot has happened since last entry.<!--more--> Let's see what I still recall.
 

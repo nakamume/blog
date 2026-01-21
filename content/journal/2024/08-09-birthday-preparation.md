@@ -2,7 +2,6 @@
 title: "Birthday Preparation"
 date: 2024-08-09
 tags: ["2024-08", "2024", "birthday"]
-toc: false
 ---
 Looks like I am on a streak. Third post within two days. There has been a major earthquake<!--more--> in Kyushu. Fortunately, we didn't feel anything in Tokyo, and all the friends and family members are keeping safe.
 

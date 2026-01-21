@@ -2,7 +2,6 @@
 title: "Friends Retirement Party"
 date: 2024-10-09
 tags: ["2024-10", "2024"]
-toc: false
 ---
 Maiko has gone for the evening for her friend's retirement party. Though because of some strange events of fate, everyone except the one being retired is going to join<!--more-->
 

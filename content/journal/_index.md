@@ -1,6 +1,6 @@
 ---
 title: "(Maybe) Daily Journal"
-description: "Thoughts on life, hobbies, and personal experiences"
+description: "Raw, unfiltered thoughts on every aspect of my life"
 ---
 
-This is where I write about life outside of work - hobbies, travel, personal growth, and everything in between.
+A (kinda) daily journal where I jot down raw, direct thoughts on every aspect of my life - family, work, hobbies, and everything in between.

@@ -2,7 +2,6 @@
 title: "Tachan got Roseola"
 date: 2024-08-15
 tags: ["2024-08", "2024", "roseola"]
-toc: false
 ---
 So the earthquake wasn't that severe, but there definitely was one around 1945 JST, and we experienced something of about magnitude 2-3.<!--more--> I was on the second floor, working out and talking to my mom on the phone, and rushed down as it came. Maiko came with Tachan in her lap (it's our protocol to gather by the main door in the event of a quake). She then gathered all our emergency supplies by the door.
 

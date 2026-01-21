@@ -2,7 +2,6 @@
 title: "Moving to India"
 date: 2025-04-09
 tags: ["2025-04", "2025"]
-toc: false
 ---
 We've been cooking the idea of moving back and settling in India for the last couple of years. Now that Tachan has come of age where it would be good for him<!--more--> (kind of scared making such statements, really hard to know what's good for him or not in certain scenarios but we try our best) to settle down, we've decided on the period we want to go back (it's go back for me, for my wife and Tachan it's going to). It's late September of this year.
 

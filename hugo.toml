@@ -10,8 +10,8 @@ summaryLength = 9
   heroTagline = "A space for my thoughts on life and work"
 
   [[params.blogSections]]
-    name = "Personal"
-    url = "/personal/"
+    name = "Journal"
+    url = "/journal/"
     description = "Thoughts on life, hobbies, and personal experiences"
 
   [[params.blogSections]]
@@ -26,8 +26,8 @@ summaryLength = 9
 
 [menu]
   [[menu.main]]
-    name = "Personal"
-    url = "/personal/"
+    name = "Journal"
+    url = "/journal/"
     weight = 1
 
   [[menu.main]]

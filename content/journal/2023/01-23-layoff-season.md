@@ -2,7 +2,6 @@
 title: "Layoff Season"
 date: 2023-01-23
 tags: ["2023-01", "2023"]
-toc: false
 ---
 This entry I've copied from my Notion. That's the reason it belongs to 2023, even though I started this blog in August 2024.<!--more--> What follows next is the exact (with grammar and syntax fixed) entry from Notion.
 

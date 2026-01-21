@@ -2,7 +2,6 @@
 title: "Tachan's First Birthday"
 date: 2024-08-26
 tags: ["2024-08", "2024", "birthday", "tachan"]
-toc: false
 ---
 Last year, on 27th August at 01:45 JST, Tachan was born. It's 26th August today, and the time is 23:51 JST. He is fast asleep by my side<!--more--> as I write this. He looks even more cute and adorable while sleeping, and I have to summon all my strength to resist hugging him tightly and showering him with kisses.
 

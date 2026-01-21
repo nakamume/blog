@@ -2,7 +2,6 @@
 title: "Birthday Celebration"
 date: 2024-09-03
 tags: ["2024-09", "2024"]
-toc: false
 ---
 It's been many days since the last post, so for this one, I forced myself to write, hopefully to get myself back in the flow.<!--more--> This weekend, 31st August, we held the birthday party for Tachan. We invited our friends and Maiko's brothers. Maiko's brothers got some work and couldn't make it. Four of my Indian friends, along with their wives and girlfriends, showed up.
 
