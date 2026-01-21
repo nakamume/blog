@@ -112,7 +112,7 @@ Used [favicon-converter](https://favicon.io/favicon-converter/) on my profile im
 
 ### Github and Feed icons
 This is how the nav bar used to look before
-![old nav bar](/images/navbar-20240808.png)
+![old nav bar](/images/professional/navbar-20240808.png)
 The link for the rss feed of this blog and my github page looked so bad. I looked at how Docusaurus themselves have done it for their site and copied their config. So the navbar config looks like
 ```js title="docusaurus.config.ts"
 ....
@@ -173,6 +173,6 @@ corresponding css config
 Feel free to copy it if you need :wink:. I got the Github icon svg from the Docusaurus github repo. As for the rss icon, I downloded the svg from [www.svgrepo.com](https://www.svgrepo.com/svg/507840/rss) and then converted it to css using [yoksel.github.io/url-encoder](https://yoksel.github.io/url-encoder/).
 
 That's all for today and this post. Ah well, one more thing. This is how the navigation bar looks after these changes (in case the current nav-bar has changed after this blog entry).
-![new nav bar](/images/new-navbar-20240808.png)
+![new nav bar](/images/professional/new-navbar-20240808.png)
 
 Much better than before and I like it a lot as of now.

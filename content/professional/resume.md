@@ -1,6 +1,6 @@
 ---
 title: "Senior Platform Engineer, SmartNews | Tokyo, Japan"
-date: 2025-04-09
+date: 2026-01-17
 tags: ["2025-04", "2025", "resume"]
 draft: false
 ---
